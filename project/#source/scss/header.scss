@@ -1,0 +1,149 @@
+.header {
+   z-index: 10000;
+   position: fixed;
+   //position: relative;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 30px 0;
+   background: rgba(44, 93, 37, 0.5);
+   transition: background 0.4s ease-in;
+   &.green {
+      background: rgba(44, 93, 37, 1);
+   }
+   // .header__body
+
+   &__body {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   // .header__logo
+
+   &__logo {
+      width: 60px;
+      position: relative;
+      img {
+         top: 0;
+         left: 0;
+         position: absolute;
+         max-width: 100%;
+         transform: translateY(-50%);
+      }
+   }
+
+   // .header__burger
+
+   &__burger {
+      display: none;
+   }
+   &__burger.active::before {
+      top: 9px;
+      transform: rotate(45deg);
+   }
+   &__burger.active::after {
+      bottom: 9px;
+      transform: rotate(-45deg);
+   }
+   &__burger.active span {
+      transform: scale(0);
+   }
+   // .header__menu
+
+   &__menu {
+   }
+
+   // .header__list
+
+   &__list {
+      display: flex;
+      li:not(:last-child) {
+         margin-right: 30px;
+      }
+   }
+
+   // .header__link
+
+   &__link {
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: 700;
+      &:hover {
+         text-shadow: white 0px 0px 1.5px;
+         transition: all 0.2s ease-in;
+      }
+   }
+}
+@media (max-width: 767.98px) {
+   .header {
+      background: rgba(44, 93, 37, 1);
+   }
+   body.lock {
+      overflow: hidden;
+   }
+   .header__burger {
+      display: block;
+      position: relative;
+      z-index: 3;
+      width: 30px;
+      height: 20px;
+      &::after,
+      &::before {
+         position: absolute;
+         left: 0;
+         transition-duration: 0.3s;
+         width: 100%;
+         height: 2px;
+         content: "";
+         background: #ffffff;
+      }
+      &::before {
+         top: 0;
+      }
+      &::after {
+         bottom: 0;
+      }
+      span {
+         position: absolute;
+         top: 9px;
+         left: 0;
+         transition-duration: 0.3s;
+         width: 100%;
+         height: 2px;
+         background: #ffffff;
+      }
+   }
+   .header__menu {
+      position: fixed;
+      background: rgb(5, 77, 10);
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: -200%;
+      transition: left linear 0.3s;
+   }
+   .header__menu.active {
+      top: 0;
+      left: 0;
+      overflow: auto;
+   }
+   .header__list {
+      max-width: $maxWidthContainer + px;
+      margin: 0 auto;
+      padding: 0 $paddingContainer + px;
+      display: block;
+      li:not(:last-child) {
+         margin-right: 0px;
+      }
+      li {
+         padding: 30px;
+         text-align: center;
+         position: relative;
+         a {
+            font-size: 22px;
+         }
+      }
+   }
+}
