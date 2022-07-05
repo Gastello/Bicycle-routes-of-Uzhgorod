@@ -276,12 +276,18 @@ body {
       background-attachment: scroll;
    }
 }
+@supports (-webkit-overflow-scrolling: touch) {
+   .page {
+      background-attachment: scroll;
+   }
+}
 
 @supports not (-webkit-touch-callout: none) {
    .page {
       background-attachment: fixed;
    }
 }
+
 .read-more {
    text-decoration: none;
    color: white;
