@@ -488,21 +488,10 @@ body {
 
 .page {
   background: #075007 url(../images/background.jpg);
+  background-size: 100%;
   background-size: cover;
   background-position: 50%;
   position: relative; }
-
-@supports (-webkit-touch-callout: none) {
-  .page {
-    background-attachment: scroll; } }
-
-@supports (-webkit-overflow-scrolling: touch) {
-  .page {
-    background-attachment: scroll; } }
-
-@supports not (-webkit-touch-callout: none) {
-  .page {
-    background-attachment: fixed; } }
 
 .read-more {
   text-decoration: none;
