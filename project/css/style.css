@@ -489,9 +489,9 @@ body {
 .page {
   background: #075007 url(../images/background.jpg);
   background-size: 100%;
-  background-size: cover;
   background-position: 50%;
-  position: relative; }
+  position: relative;
+  background-attachment: fixed; }
 
 .read-more {
   text-decoration: none;

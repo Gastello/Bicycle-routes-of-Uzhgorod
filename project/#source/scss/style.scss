@@ -268,9 +268,9 @@ body {
 .page {
    background: rgb(7, 80, 7) url(../images/background.jpg);
    background-size: 100%;
-   background-size: cover;
    background-position: 50%;
    position: relative;
+   background-attachment: fixed;
 }
 
 .read-more {
