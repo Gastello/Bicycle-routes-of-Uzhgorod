@@ -487,8 +487,8 @@ body {
   transition: all 0.2s ease-in-out; }
 
 .page {
-  background: #075007 url(../images/background.jpg);
-  background-size: 100%;
+  background: #075007 url(../images/background.jpg) no-repeat;
+  background-size: auto;
   background-position: 50%;
   position: relative;
   background-attachment: fixed; }

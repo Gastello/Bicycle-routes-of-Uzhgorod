@@ -266,8 +266,8 @@ body {
    transition: all 0.2s ease-in-out;
 }
 .page {
-   background: rgb(7, 80, 7) url(../images/background.jpg);
-   background-size: 100%;
+   background: rgb(7, 80, 7) url(../images/background.jpg) no-repeat;
+   background-size: auto;
    background-position: 50%;
    position: relative;
    background-attachment: fixed;
