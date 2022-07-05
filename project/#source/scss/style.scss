@@ -270,11 +270,15 @@ body {
    background-size: cover;
    background-position: 50%;
    position: relative;
-   @supports (-webkit-touch-callout: none) {
+}
+@supports (-webkit-touch-callout: none) {
+   .page {
       background-attachment: scroll;
    }
+}
 
-   @supports not (-webkit-touch-callout: none) {
+@supports not (-webkit-touch-callout: none) {
+   .page {
       background-attachment: fixed;
    }
 }
