@@ -269,7 +269,14 @@ body {
    background: rgb(7, 80, 7) url(../images/background.jpg);
    background-size: cover;
    background-position: 50%;
-   background-attachment: fixed;
+   position: relative;
+   @supports (-webkit-touch-callout: none) {
+      background-attachment: scroll;
+   }
+
+   @supports not (-webkit-touch-callout: none) {
+      background-attachment: fixed;
+   }
 }
 .read-more {
    text-decoration: none;
