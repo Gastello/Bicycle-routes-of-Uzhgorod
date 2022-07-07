@@ -266,22 +266,16 @@ body {
    transition: all 0.2s ease-in-out;
 }
 .page {
+   background: rgb(7, 80, 7) url(../images/background.jpg) no-repeat;
+   background-size: cover;
+   background-position: 50%;
    position: relative;
-
-   &:before {
-      content: "";
-      background: rgb(7, 80, 7) url(../images/background.jpg) no-repeat;
-      background-position: 50%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 100vh;
-      width: 100%;
-      -webkit-background-size: cover !important;
-      -moz-background-size: cover !important;
-      -o-background-size: cover;
-      background-size: cover !important;
-      z-index: -1;
+   background-attachment: fixed;
+   @supports (-webkit-touch-callout: none) {
+      .imageDiv {
+         background: rgb(7, 80, 7) url(../images/background.jpg) center top no-repeat scroll;
+         background-size: auto 100vh;
+      }
    }
 }
 
