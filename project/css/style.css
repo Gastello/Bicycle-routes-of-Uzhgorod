@@ -493,7 +493,7 @@ body {
   position: relative;
   background-attachment: fixed; }
   @supports (-webkit-touch-callout: none) {
-    .page .imageDiv {
+    .page {
       background: #075007 url(../images/background.jpg) center top no-repeat scroll;
       background-size: auto 100vh; } }
 
