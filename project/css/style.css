@@ -488,7 +488,7 @@ body {
 
 .page {
   background: #075007 url(../images/background.jpg) no-repeat;
-  background-size: auto;
+  background-size: auto 100%;
   background-position: 50%;
   position: relative;
   background-attachment: fixed; }
