@@ -490,7 +490,7 @@ body {
   position: relative; }
   .page:before {
     content: "";
-    background: #075007 url(../images/background.webp) no-repeat;
+    background: #075007 url(../images/background.jpg) no-repeat;
     background-position: 50%;
     position: fixed;
     top: 0;
